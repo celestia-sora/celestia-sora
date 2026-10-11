@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/main/assets/profile-header.svg" width="100%" alt="Sora Hoshimi — a tiny universe of daydreams, with pastel pink clouds, lavender stars, and a crescent moon">
+<img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/87fea28be94b69952e8e16a05b38a52a71e46140/assets/profile-header.svg" width="100%" alt="Sora Hoshimi — a tiny universe of daydreams, with pastel pink clouds, lavender stars, and a crescent moon">
 
 # Hi, I’m Sora 🌙
 
