@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/main/assets/profile-header.svg" width="100%" alt="Sora Astral — a tiny universe of daydreams, with pastel pink clouds, lavender stars, and a crescent moon">
+<img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/main/assets/profile-header.svg" width="100%" alt="Sora Hoshimi — a tiny universe of daydreams, with pastel pink clouds, lavender stars, and a crescent moon">
 
 # Hi, I’m Sora 🌙
 
@@ -18,7 +18,7 @@ Welcome to my tiny universe — where code meets imagination. ✧
 
 ### 🌸 A little hello
 
-I’m **Sora Astral**. I make AI companions, explore language models, and build places for characters and stories to feel at home. My projects bring together conversation, creativity, and a little anime-inspired magic.
+I’m **Sora Hoshimi**. I make AI companions, explore language models, and build places for characters and stories to feel at home. My projects bring together conversation, creativity, and a little anime-inspired magic.
 
 [Explore my work](#-selected-work) · [Say hello](#-find-me-here) · [Run this portfolio](#-behind-the-portfolio)
 
