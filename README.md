@@ -25,7 +25,7 @@ I’m **Sora Hoshimi**. I make AI companions, explore language models, and build
 ### ✨ Selected work
 
 <a href="https://oonchai.vercel.app/">
-  <img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/main/sora-art/sekaira.png" width="100%" alt="Sekaira artwork for Oonchai: a lavender-haired anime character in a dreamy, star-lit world. Across Worlds, Always with You.">
+  <img src="https://raw.githubusercontent.com/celestial-sora/celestial-sora/main/sora-art/" width="100%" alt="Sekaira artwork for Oonchai: a lavender-haired anime character in a dreamy, star-lit world. Across Worlds, Always with You.">
 </a>
 
 | Project | A small window into its world | Explore |
