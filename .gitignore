@@ -3,3 +3,7 @@
 .env.*
 .vercel/
 __pycache__/
+node_modules/
+dist/
+.astro/
+.taste-skill/
