@@ -2,22 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import MobileMenu from '../components/MobileMenu.astro';
-import HeroSection from '../components/HeroSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
 import SocialSection from '../components/SocialSection.astro';
 import Footer from '../components/Footer.astro';
 import ScrollToTop from '../components/ScrollToTop.astro';
 ---
-<Layout title="Sora Astral" description="Hi, I'm Sora. I make AI companions, little story worlds, and cozy places on the internet.">
+<Layout title="Celestia Sora — AI, code & little worlds" description="Hi, I'm Sora. I make AI companions, little story worlds, and cozy places on the internet.">
 	<!-- Navigation Menu -->
 	<Navbar />
 	<MobileMenu />
 
 	<!-- Main Sections -->
-	<main>
-		<HeroSection />
-		<!-- About Me (text & stats card only) -->
+	<main id="content">
+		<!-- About Me -->
 		<AboutSection />
 
 		<!-- Projects (Creations) -->

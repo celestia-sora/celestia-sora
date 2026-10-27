@@ -7,8 +7,9 @@ interface Project {
   tags: string[];
   primary: string;
   href: string;
-  image: string;
-  alt: string;
+  image: string | null;
+  accent?: string;
+  alt?: string;
 }
 
 const projects: Project[] = [
@@ -53,8 +54,9 @@ const projects: Project[] = [
     tags: ['Visual Novel', 'AI Branching', 'OpenRouter', 'Web Audio'],
     primary: 'View on GitHub',
     href: 'https://github.com/celestial-sora/Sora-Novel',
-    image: 'sora-novel-banner.jpg',
-    alt: 'Sora Novel Project Koharu visual novel title banner',
+    image: null, // Temporary disabled image banner per user request
+    accent: 'card-accent--pink',
+    alt: 'Sora Novel Project Koharu visual novel banner',
   },
   {
     number: '05',
@@ -82,14 +84,26 @@ const projects: Project[] = [
   <div class="project-grid">
     {projects.map((project) => (
       <article class="project-card material-card">
-        <div class="project-banner project-banner--image">
-          <img
-            class="project-banner__image"
-            src={`/${project.image}`}
-            alt={project.alt}
-            loading="lazy"
-            decoding="async"
-          />
+        <div class={`project-banner ${project.image ? 'project-banner--image' : `project-banner--fallback ${project.accent || ''}`}`}>
+          {project.image ? (
+            <img
+              class="project-banner__image"
+              src={`/${project.image}`}
+              alt={project.alt || `${project.title} banner`}
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <div class="project-banner__placeholder">
+              <span class="project-banner__fallback-index">{project.number} / PROJECT</span>
+              <div class="project-banner__fallback-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6.4-4.6-6.4 4.6 2.4-7.2-6-4.8h7.6z"/>
+                </svg>
+              </div>
+              <strong class="project-banner__fallback-title">{project.title}</strong>
+            </div>
+          )}
         </div>
         <div class="project-card__body">
           <div class="project-card__meta">
@@ -154,5 +168,45 @@ const projects: Project[] = [
   }
   .project-card:hover .project-banner__image {
     transform: scale(1.025);
+  }
+  .project-banner--fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .card-accent--pink {
+    background: radial-gradient(circle at 80% 20%, rgba(209, 79, 115, 0.35), transparent 50%), linear-gradient(135deg, #2d1f2b 0%, #46223b 50%, #683053 100%);
+    color: #fcecef;
+  }
+  :global([data-theme="light"]) .card-accent--pink {
+    background: radial-gradient(circle at 80% 20%, rgba(209, 79, 115, 0.18), transparent 50%), linear-gradient(135deg, #faedf3 0%, #f7dbe7 50%, #f3c9db 100%);
+    color: #4a1930;
+  }
+  .project-banner__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+  .project-banner__fallback-index {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    opacity: 0.75;
+    text-transform: uppercase;
+  }
+  .project-banner__fallback-mark svg {
+    width: 28px;
+    height: 28px;
+    opacity: 0.85;
+  }
+  .project-banner__fallback-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 </style>

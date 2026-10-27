@@ -4,10 +4,9 @@
     <div class="mobile-menu__sheet">
         <div class="mobile-menu__top"><span>Navigate</span><button id="mobileMenuClose" type="button" aria-label="Close menu">×</button></div>
         <div class="mobile-menu__links">
-            <a class="mobile-link" href="#home">Home <span>01</span></a>
-            <a class="mobile-link" href="#about">About <span>02</span></a>
-            <a class="mobile-link" href="#projects">Work <span>03</span></a>
-            <a class="mobile-link" href="#social">Social <span>04</span></a>
+            <a class="mobile-link" href="#about">About <span>01</span></a>
+            <a class="mobile-link" href="#projects">Work <span>02</span></a>
+            <a class="mobile-link" href="#social">Social <span>03</span></a>
         </div>
     </div>
 </div>
@@ -35,6 +34,7 @@
     closeButton?.addEventListener('click', closeMenu);
     menu?.querySelectorAll<HTMLAnchorElement>('.mobile-link').forEach((link) => link.addEventListener('click', () => {
         closeMenu();
-        document.getElementById(link.getAttribute('href')?.slice(1) || '')?.scrollIntoView({ behavior: 'smooth' });
+        const target = document.getElementById(link.getAttribute('href')?.slice(1) || '');
+        if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 92, behavior: 'smooth' });
     }));
 </script>
